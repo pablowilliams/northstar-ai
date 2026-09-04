@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "project": "Northstar Transformation Studio",
+    "organisation": "Aster & Row (fictional)",
+    "evaluation_type": "deterministic synthetic holdout simulation",
+    "seed": 42026,
+    "cases": 5000,
+    "bootstraps": 2000,
+    "generated_from": "analytics/backtest.py",
+    "claim_boundary": "Portfolio evidence only; not a production or causal performance claim."
+  },
+  "headline": {
+    "baseline_mean_minutes": 19.16,
+    "assisted_mean_minutes": 12.05,
+    "mean_minutes_saved": 7.1,
+    "mean_minutes_saved_95ci": [
+      7.057,
+      7.152
+    ],
+    "mean_time_reduction_pct": 37.1,
+    "baseline_median_minutes": 18.75,
+    "assisted_median_minutes": 11.53,
+    "median_time_reduction_pct": 38.5,
+    "baseline_fcr_pct": 69.1,
+    "assisted_fcr_pct": 86.8,
+    "fcr_uplift_pp": 17.7,
+    "baseline_reopen_pct": 34.8,
+    "assisted_reopen_pct": 15.0,
+    "reopen_reduction_pp": 19.8,
+    "baseline_policy_adherence_pct": 86.3,
+    "assisted_policy_adherence_pct": 99.2,
+    "retrieval_accuracy_pct": 97.7,
+    "escalation_precision_pct": 81.4,
+    "escalation_recall_pct": 97.8,
+    "unauthorized_writes": 0,
+    "trace_coverage_pct": 100.0
+  },
+  "uncertainty": {
+    "baseline_fcr_95ci": [
+      0.6776,
+      0.7033
+    ],
+    "assisted_fcr_95ci": [
+      0.8583,
+      0.8771
+    ],
+    "assisted_policy_95ci": [
+      0.9891,
+      0.9941
+    ],
+    "zero_unsafe_write_upper_95_pct": 0.06,
+    "zero_red_team_bypass_upper_95_pct": 0.75
+  },
+  "business_case": {
+    "annual_cases": 120000,
+    "loaded_hourly_cost_gbp": 32.0,
+    "annual_labour_capacity_value_gbp": 454685,
+    "avoided_repeat_contacts": 23736,
+    "annual_repeat_contact_value_gbp": 185141,
+    "annual_gross_value_gbp": 639825,
+    "year_one_platform_cost_gbp": 190000,
+    "year_one_net_value_gbp": 449825,
+    "payback_months": 3.6,
+    "three_year_npv_gbp": 1175411,
+    "discount_rate_pct": 8.0
+  },
+  "segments": {
+    "complexity": [
+      {
+        "segment": "high",
+        "n": 819,
+        "baseline_mean_minutes": 25.56,
+        "assisted_mean_minutes": 17.99,
+        "time_reduction_pct": 29.6,
+        "fcr_uplift_pp": 21.4,
+        "policy_adherence_pct": 99.0
+      },
+      {
+        "segment": "low",
+        "n": 2275,
+        "baseline_mean_minutes": 15.62,
+        "assisted_mean_minutes": 9.01,
+        "time_reduction_pct": 42.3,
+        "fcr_uplift_pp": 15.5,
+        "policy_adherence_pct": 99.2
+      },
+      {
+        "segment": "medium",
+        "n": 1906,
+        "baseline_mean_minutes": 20.63,
+        "assisted_mean_minutes": 13.13,
+        "time_reduction_pct": 36.4,
+        "fcr_uplift_pp": 18.9,
+        "policy_adherence_pct": 99.3
+      }
+    ],
+    "channel": [
+      {
+        "segment": "chat",
+        "n": 1938,
+        "baseline_mean_minutes": 19.14,
+        "assisted_mean_minutes": 11.99,
+        "time_reduction_pct": 37.4,
+        "fcr_uplift_pp": 17.8,
+        "policy_adherence_pct": 99.2
+      },
+      {
+        "segment": "email",
+        "n": 1693,
+        "baseline_mean_minutes": 19.11,
+        "assisted_mean_minutes": 12.02,
+        "time_reduction_pct": 37.1,
+        "fcr_uplift_pp": 17.8,
+        "policy_adherence_pct": 99.2
+      },
+      {
+        "segment": "phone",
+        "n": 1369,
+        "baseline_mean_minutes": 19.23,
+        "assisted_mean_minutes": 12.17,
+        "time_reduction_pct": 36.7,
+        "fcr_uplift_pp": 17.7,
+        "policy_adherence_pct": 99.2
+      }
+    ],
+    "category": [
+      {
+        "segment": "change_of_mind",
+        "n": 1141,
+        "baseline_mean_minutes": 19.06,
+        "assisted_mean_minutes": 11.85,
+        "time_reduction_pct": 37.8,
+        "fcr_uplift_pp": 18.2,
+        "policy_adherence_pct": 98.9
+      },
+      {
+        "segment": "damaged_item",
+        "n": 992,
+        "baseline_mean_minutes": 19.21,
+        "assisted_mean_minutes": 11.98,
+        "time_reduction_pct": 37.6,
+        "fcr_uplift_pp": 15.4,
+        "policy_adherence_pct": 99.4
+      },
+      {
+        "segment": "late_delivery",
+        "n": 1169,
+        "baseline_mean_minutes": 19.11,
+        "assisted_mean_minutes": 11.95,
+        "time_reduction_pct": 37.5,
+        "fcr_uplift_pp": 18.4,
+        "policy_adherence_pct": 99.2
+      },
+      {
+        "segment": "missing_refund",
+        "n": 603,
+        "baseline_mean_minutes": 19.59,
+        "assisted_mean_minutes": 12.2,
+        "time_reduction_pct": 37.8,
+        "fcr_uplift_pp": 19.1,
+        "policy_adherence_pct": 99.5
+      },
+      {
+        "segment": "warranty",
+        "n": 380,
+        "baseline_mean_minutes": 19.03,
+        "assisted_mean_minutes": 13.29,
+        "time_reduction_pct": 30.2,
+        "fcr_uplift_pp": 16.6,
+        "policy_adherence_pct": 98.9
+      },
+      {
+        "segment": "wrong_item",
+        "n": 715,
+        "baseline_mean_minutes": 19.01,
+        "assisted_mean_minutes": 11.87,
+        "time_reduction_pct": 37.5,
+        "fcr_uplift_pp": 18.6,
+        "policy_adherence_pct": 99.2
+      }
+    ],
+    "vulnerability": [
+      {
+        "segment": "False",
+        "n": 4429,
+        "baseline_mean_minutes": 19.07,
+        "assisted_mean_minutes": 11.81,
+        "time_reduction_pct": 38.1,
+        "fcr_uplift_pp": 17.6,
+        "policy_adherence_pct": 99.2
+      },
+      {
+        "segment": "True",
+        "n": 571,
+        "baseline_mean_minutes": 19.85,
+        "assisted_mean_minutes": 13.93,
+        "time_reduction_pct": 29.8,
+        "fcr_uplift_pp": 18.9,
+        "policy_adherence_pct": 99.5
+      }
+    ]
+  },
+  "red_team": {
+    "cases": 400,
+    "blocked": 400,
+    "bypasses": 0,
+    "writes_executed": 0,
+    "by_attack": {
+      "prompt_injection": 100,
+      "data_exfiltration": 100,
+      "tool_override": 100,
+      "role_spoofing": 100
+    }
+  },
+  "limitations": [
+    "All customers, cases, outcomes, costs and policies are synthetic.",
+    "The baseline and intervention are simulated, not observed in a randomised production trial.",
+    "Annualised value is capacity opportunity, not guaranteed cashable savings.",
+    "The deterministic red-team suite is evidence of tested controls, not proof against novel attacks.",
+    "A live pilot would require shadow mode, human review, privacy assessment and pre-agreed stop criteria."
+  ]
+}

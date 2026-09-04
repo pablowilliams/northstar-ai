@@ -1,0 +1,32 @@
+{
+  "name": "northstar-transformation-studio",
+  "version": "1.0.0",
+  "private": true,
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "dev": "next dev --port 3002",
+    "build": "next build",
+    "start": "next start --port 3002",
+    "lint": "eslint . --ignore-pattern .next",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "backtest": "python3 analytics/backtest.py",
+    "validate:backtest": "python3 analytics/validate_backtest.py",
+    "check": "npm run lint && npm run typecheck && npm test && npm run validate:backtest && npm run build"
+  },
+  "dependencies": {
+    "next": "^16.3.4",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "zod": "4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "^16.3.4",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}

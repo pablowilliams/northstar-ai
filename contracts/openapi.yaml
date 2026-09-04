@@ -1,0 +1,90 @@
+openapi: 3.1.0
+info:
+  title: Northstar Transformation Studio API
+  version: 1.0.0
+  description: Synthetic portfolio API for an AI transformation engagement.
+servers:
+  - url: http://localhost:3002/api
+paths:
+  /health:
+    get:
+      operationId: getHealth
+      responses:
+        "200": { description: Service and evidence checks }
+  /engagement:
+    get:
+      operationId: getEngagement
+      responses:
+        "200": { description: Engagement, stakeholders, risks and roadmap }
+  /opportunities:
+    get:
+      operationId: listOpportunities
+      responses:
+        "200": { description: Prioritised AI opportunity portfolio }
+    post:
+      operationId: scoreOpportunity
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/OpportunityInput" }
+      responses:
+        "201": { description: Scored opportunity }
+        "400": { description: Validation error }
+  /cases:
+    get:
+      operationId: listSyntheticCases
+      responses:
+        "200": { description: Synthetic prototype cases }
+  /backtest:
+    get:
+      operationId: getBacktestEvidence
+      responses:
+        "200": { description: Reproducible backtest aggregate }
+  /workflows:
+    post:
+      operationId: runGovernedWorkflow
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [caseId]
+              properties: { caseId: { type: string, example: AST-02711 } }
+      responses:
+        "201": { description: Recommendation, evidence and control trace }
+        "404": { description: Case not found }
+  /approvals:
+    post:
+      operationId: approveExactPayload
+      description: Approves only the hash recorded on the proposed tool action.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [runId, payloadHash]
+              properties:
+                runId: { type: string }
+                payloadHash: { type: string, minLength: 16, maxLength: 16 }
+      responses:
+        "200": { description: Simulated write completed }
+        "409": { description: Hash mismatch or expiry }
+components:
+  schemas:
+    OpportunityInput:
+      type: object
+      required: [id, title, function, problem, value, feasibility, evidence, risk, effortWeeks, annualValueGbp]
+      properties:
+        id: { type: string }
+        title: { type: string }
+        function: { type: string }
+        problem: { type: string }
+        value: { type: number, minimum: 1, maximum: 5 }
+        feasibility: { type: number, minimum: 1, maximum: 5 }
+        evidence: { type: number, minimum: 1, maximum: 5 }
+        risk: { type: number, minimum: 1, maximum: 5 }
+        effortWeeks: { type: number, exclusiveMinimum: 0 }
+        annualValueGbp: { type: number, minimum: 0 }
