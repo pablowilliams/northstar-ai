@@ -1,8 +1,26 @@
 # Northstar Transformation Studio
 
+[![Quality gates](https://github.com/pablowilliams/northstar-ai/actions/workflows/quality.yml/badge.svg)](https://github.com/pablowilliams/northstar-ai/actions/workflows/quality.yml)
+![Next.js](https://img.shields.io/badge/Next.js-16-111a16)
+![TypeScript](https://img.shields.io/badge/TypeScript-strict-187255)
+![Evidence](https://img.shields.io/badge/synthetic_cases-5%2C000-d3ed72)
+
 Northstar is a decision-grade AI consulting workbench for a fictional UK retailer, Aster & Row. It connects strategy, discovery, opportunity prioritisation, agentic solution architecture, responsible-AI controls, a working governed prototype, evaluation, benefits modelling and an investment roadmap in one demonstrable product.
 
 This is a portfolio project. All customers, records, policies and results are synthetic.
+
+## Product experience
+
+The interface is designed as a credible consulting and delivery workspace rather than a landing page. Six linked workspaces cover executive health, opportunity prioritisation, a controlled agent proof, backtest evidence, target architecture and the investment roadmap.
+
+- Collapsible desktop navigation and responsive mobile drawer
+- URL-addressable workspaces with persistent navigation preference
+- Command palette (`Cmd/Ctrl + K`) and direct `1`-`6` workspace shortcuts
+- Accessible skip navigation, focus states and reduced-motion support
+- Interactive value-feasibility matrix and stakeholder weighting scenarios
+- Live governed workflow states with loading, failure, blocked, approval and completed paths
+- Cohort-level evidence visualisation and editable commercial sensitivity model
+- Production loading and error boundaries with a health-check endpoint
 
 ## What an interviewer can inspect
 
